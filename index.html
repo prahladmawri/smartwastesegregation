@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="title">Smart Waste Segregation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <header>
+            <h1 class="nav-title">Smart Waste Segregation & Recycling Assistant</h1>
+            
+            <div class="navbar">
+                <a class="border" href="classifywaste.html" id="nav-classify">Classify Waste</a>
+                <a class="border" href="recycle.html" id="nav-recycle">Recycling Centers</a>
+                <a class="border" href="diy.html" id="nav-diy">DIY Recycling</a>
+            </div>
+    
+            <div class="language-container">
+                <label for="language-selector" id="language-label">Select Language:</label>
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                </select>
+            </div>
+    
+            <div class="scan">
+                <button id="scan-btn">Scan</button>
+                <input type="file" id="upload-btn" accept="image/*">
+                <video id="scanner-preview" autoplay></video>
+            </div>
+        </header>
+    
+        <main>
+            <h2 id="welcome-text">Make Waste Management Smarter!</h2>
+            <p id="description">Identify waste categories, find nearby recycling centers, and learn creative DIY recycling ideas.</p>
+            <a href="classifywaste.html" class="btn" id="start-btn">Start Now</a>
+        </main>
+    
+        <footer>
+            <p id="footer-text">© 2025 Smart Waste Management. All rights reserved.</p>
+        </footer>
+    
+        
+        <script src="language.js"></script>
+        <script>
+            
+            document.getElementById("language-selector").addEventListener("change", function() {
+                changeLanguage(this.value);
+            });
+    
+            
+            window.onload = function() {
+                changeLanguage("en");
+            };
+        </script>
+    </body>
+    </html>
